@@ -1,0 +1,31 @@
+# main.py
+#repeat (numOfElements - 1) times
+
+  #set the first unsorted element as the minimum
+
+  #for each of the unsorted elements
+
+    #if element < currentMinimum
+
+      #set element as new minimum
+
+  #swap minimum with first unsorted position
+
+numbers=[3,44,38,5,47,2,15,36,20,12]
+def Sorting(numbers):
+  for i in range(len(numbers)):
+    minimum=numbers[i]
+    empty2=i
+    for j in range(i+1,len(numbers)):
+      if numbers[j]<minimum:
+        minimum=numbers[j]
+        empty=j
+    #temp=numbers[i]
+    #numbers[i]=minimum
+    #numbers[empty2]=temp
+    numbers[empty2],numbers[empty]=numbers[empty],numbers[empty2]
+  return numbers
+  
+print(Sorting(numbers))
+    
+    
